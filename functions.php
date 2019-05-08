@@ -212,10 +212,10 @@ add_action( 'wp_enqueue_scripts', 'dft_enqueue_scripts' );
 
 if ( is_admin() ) {
     function ordena_post_types_dashboard( $wp_query ) {
-        if ( is_admin() && !isset( $_GET['orderby'] ) ) {
+        if ( is_admin() && !isset( $_GET['orderby'] ) && $wp_query->query['post_type'] != 'acf-field' ) {
             $wp_query->set( 'orderby', 'date' );
             $wp_query->set( 'order', 'DESC' );
         }
     }
     add_filter( 'pre_get_posts', 'ordena_post_types_dashboard' );
-}
+ }
