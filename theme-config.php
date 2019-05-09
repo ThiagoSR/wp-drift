@@ -24,8 +24,9 @@ define( 'SUPORTE_WOOCOMMERCE', false );
 
 /**
  * PWA / Mobile
+ * Deixar False atualmente com erro
  */
-define( 'SUPORTE_PWA', true );
+define( 'SUPORTE_PWA', false );
 define( 'COR_BARRA_NAVEGADOR', '#000000' );
 
 
